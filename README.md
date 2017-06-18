@@ -28,7 +28,7 @@ Exposing stylelint and eslint config allows for **out of the box** real time val
 ## How can I update to the latest version?
 
 ```sh
-yarn update netguru-react-scripts
+yarn upgrade netguru-react-scripts
 ```
 
 Since linter configs are exposed they may need to be updated manually. Check the release notes for instructions regarding that.
