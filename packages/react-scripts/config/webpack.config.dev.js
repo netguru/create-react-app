@@ -139,6 +139,7 @@ module.exports = {
               // @remove-on-eject-begin
               ignore: false,
               configFile: require.resolve(paths.appPath + '/.eslintrc.js'),
+              emitWarning: true,
               // @remove-on-eject-end
             },
             loader: require.resolve('eslint-loader'),
