@@ -1,9 +1,9 @@
 @mixin _position($position, $args) {
   @each $dir in top, left, bottom, right {
+    $i: index($args, $dir);
     @if $i {
       #{$dir}: nth($args, $i + 1);
     }
-    $i: index($args, $dir);
   }
 
   position: $position;
