@@ -46,6 +46,7 @@ module.exports = (resolve, rootDir, isEjecting) => {
       "node_modules",
       "<rootDir>/src"
     ],
+    moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
   };
   if (rootDir) {
     config.rootDir = rootDir;
