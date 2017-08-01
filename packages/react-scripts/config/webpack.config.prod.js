@@ -215,6 +215,7 @@ module.exports = {
                     minimize: true,
                     sourceMap: true,
                     modules: process.env.CSS_MODULES ? process.env.CSS_MODULES == 'true' : true,
+                    camelCase: true,
                     localIdentName: '[path][name]__[local]--[hash:base64:5]',
                   },
                 },
