@@ -193,6 +193,7 @@ module.exports = {
           // in development "style" loader enables hot editing of CSS.
           {
             test: /\.(css|scss)$/,
+            exclude: paths.appNodeModules,
             use: [
               require.resolve('style-loader'),
               {
@@ -225,6 +226,30 @@ module.exports = {
                       flexbox: 'no-2009',
                     }),
                   ],
+                },
+              },
+            ],
+          },
+          {
+            test: /\.(css|scss)$/,
+            include: paths.appNodeModules,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 2,
+                },
+              },
+              {
+                loader: require.resolve('sass-loader'),
+              },
+              {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                  // Necessary for external CSS imports to work
+                  // https://github.com/facebookincubator/create-react-app/issues/2677
+                  ident: 'postcss',
                 },
               },
             ],
