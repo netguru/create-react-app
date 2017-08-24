@@ -43,8 +43,8 @@ module.exports = function(
     build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
-    stylelint: 'node ./node_modules/stylelint/bin/stylelint.js src/**/*.scss',
-    eslint: 'node ./node_modules/eslint/bin/eslint.js src/**/*.js',
+    stylelint: 'stylelint src/**/*.scss',
+    eslint: 'eslint src/**/*.js',
   };
 
   fs.writeFileSync(
