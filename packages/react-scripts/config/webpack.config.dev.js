@@ -56,10 +56,6 @@ module.exports = {
     // require.resolve('webpack-dev-server/client') + '?/',
     // require.resolve('webpack/hot/dev-server'),
     require.resolve('react-dev-utils/webpackHotDevClient'),
-    // We ship a few polyfills by default:
-    require.resolve('./polyfills'),
-    // Errors should be considered fatal in development
-    require.resolve('react-error-overlay'),
     // Finally, this is your app's code:
     paths.appIndexJs,
     // We include the app code last so that if there is a runtime error during
@@ -292,6 +288,7 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty',
+    child_process: 'empty',
   },
   // Turn off performance hints during development because we don't do any
   // splitting or minification in interest of speed. These warnings become
