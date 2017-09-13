@@ -59,7 +59,7 @@ With this approach we can benefit from what is best from those two worlds. We ca
 How to use it? Since there is no global scope we need to implicitly import our variables/mixins etc. Check the `src/Components/App/style.scss` file. On the first line it imports the shared styles with variables and mixins.
 
 #### 4. How do I import global styles from third-party packages?
-Importing any stylesheet from JS (with CSS Modules enabled) will convert class names into unique identifiers. By design, this prevents them from being used for global styles. If you have, say, a third-party component that provides some "regular" SCSS/CSS code, you will want to, instead, import it from an SCSS file like so:
+Importing any stylesheet from JS (with CSS Modules enabled) will convert class names into unique identifiers. By design, this prevents them from being used for global styles. If you have, say, a third-party component that provides some "regular" SCSS/CSS code, you will want to import it from an SCSS file instead, like so:
 ```
 :global {
   @import '~react-select/dist/react-select';
