@@ -22,6 +22,10 @@
   font-size: $fs-1;
 }
 
+.appTitle {
+  font-size: 1.5em;
+}
+
 @keyframes appLogoSpin {
   from {
     transform: rotate(0deg);
