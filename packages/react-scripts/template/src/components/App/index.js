@@ -24,10 +24,10 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <div className={styles.appHeader}>
+        <header className={styles.appHeader}>
           <img src={logo} className={styles.appLogo} alt="logo" />
-          <h2>Welcome to React | Count: {this.state.count}</h2>
-        </div>
+          <h1 className={styles.appTitle}>Welcome to React | Count: {this.state.count}</h1>
+        </header>
         <p className={styles.appIntro}>
           To get started, edit <code>src/components/App/index.js</code> and save to reload.
         </p>
