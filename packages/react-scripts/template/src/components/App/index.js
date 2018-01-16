@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import styles from './style.scss';
+import styles from './style.css';
 
 class App extends Component {
   state = {

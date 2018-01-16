@@ -184,13 +184,13 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.(css|scss)$/,
+            test: /\.(css)$/,
             use: [
               require.resolve('style-loader'),
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                  importLoaders: 2,
+                  importLoaders: 1,
                   modules: process.env.CSS_MODULES ? process.env.CSS_MODULES == 'true' : true,
                   camelCase: true,
                   localIdentName: '[path][name]__[local]--[hash:base64:5]',
@@ -215,9 +215,6 @@ module.exports = {
                     }),
                   ],
                 },
-              },
-              {
-                loader: require.resolve('sass-loader'),
               },
             ],
           },
