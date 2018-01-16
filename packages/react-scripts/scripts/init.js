@@ -41,8 +41,9 @@ module.exports = function(
     build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
-    stylelint: 'stylelint "src/**/*.scss"',
+    stylelint: 'stylelint "src/**/*.css"',
     eslint: 'eslint "src/**/*.js"',
+    fix: 'stylelint --fix "src/**/*.css" && eslint --fix "src/**/*.js"',
   };
 
   fs.writeFileSync(
@@ -180,12 +181,3 @@ module.exports = function(
   console.log();
   console.log('Happy hacking!');
 };
-
-function isReactInstalled(appPackage) {
-  const dependencies = appPackage.dependencies || {};
-
-  return (
-    typeof dependencies.react !== 'undefined' &&
-    typeof dependencies['react-dom'] !== 'undefined'
-  );
-}

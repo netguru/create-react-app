@@ -8,7 +8,6 @@ The idea behind this project is to provide a solid foundation for **Single Page 
 
 ## Features
 - ✅ React Hot Loader,
-- ✅ SCSS,
 - ✅ CSS Modules,
 - ✅ Eslint with Airbnb config,
 - ✅ Stylelint,
