@@ -206,9 +206,12 @@ module.exports = {
                         importLoaders: 2,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
-                        modules: process.env.CSS_MODULES ? process.env.CSS_MODULES == 'true' : true,
+                        modules: process.env.CSS_MODULES
+                          ? process.env.CSS_MODULES == 'true'
+                          : true,
                         camelCase: true,
-                        localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                        localIdentName:
+                          '[path][name]__[local]--[hash:base64:5]',
                       },
                     },
                     {
@@ -243,6 +246,11 @@ module.exports = {
               )
             ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+          },
+          // This loader will load markdown files as raw string.
+          {
+            test: /\.md$/,
+            loader: require.resolve('raw-loader'),
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
