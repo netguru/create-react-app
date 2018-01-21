@@ -101,7 +101,7 @@ module.exports = function(
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
-  args.push('react', 'react-dom', 'react-hot-loader@next', 'normalize.css');
+  args.push('react', 'react-dom', 'react-hot-loader@^3.1.3', 'normalize.css');
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
