@@ -175,8 +175,8 @@ module.exports = {
                   // directory for faster rebuilds.
                   cacheDirectory: true,
                 },
-              }
-            ]
+              },
+            ],
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -191,7 +191,9 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 2,
-                  modules: process.env.CSS_MODULES ? process.env.CSS_MODULES == 'true' : true,
+                  modules: process.env.CSS_MODULES
+                    ? process.env.CSS_MODULES == 'true'
+                    : true,
                   camelCase: true,
                   localIdentName: '[path][name]__[local]--[hash:base64:5]',
                 },
@@ -225,6 +227,12 @@ module.exports = {
           {
             test: /\.md$/,
             loader: require.resolve('raw-loader'),
+          },
+          // This loader allows to parse SVG as JSX
+          {
+            test: /\.inline\.svg$/,
+            exclude: /node_modules/,
+            loader: 'svg-react-loader',
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
