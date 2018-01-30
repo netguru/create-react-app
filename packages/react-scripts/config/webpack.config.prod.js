@@ -206,9 +206,12 @@ module.exports = {
                         importLoaders: 2,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
-                        modules: process.env.CSS_MODULES ? process.env.CSS_MODULES == 'true' : true,
+                        modules: process.env.CSS_MODULES
+                          ? process.env.CSS_MODULES == 'true'
+                          : true,
                         camelCase: true,
-                        localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                        localIdentName:
+                          '[path][name]__[local]--[hash:base64:5]',
                       },
                     },
                     {
@@ -248,6 +251,12 @@ module.exports = {
           {
             test: /\.md$/,
             loader: require.resolve('raw-loader'),
+          },
+          // This loader allows to parse SVG as JSX
+          {
+            test: /\.inline\.svg$/,
+            exclude: /node_modules/,
+            loader: 'svg-react-loader',
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.

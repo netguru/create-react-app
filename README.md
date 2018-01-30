@@ -65,3 +65,12 @@ Importing any stylesheet from JS (with CSS Modules enabled) will convert class n
   @import '~react-select/dist/react-select';
 }
 ```
+#### 5. SVG as JSX, is it even possible?
+Importing SVGs as JSX is possible, but only SVGs suffixed with `.inline` will be treated as JSX code:
+```
+import logo from './logo.svg';
+import LogoInline from './logo.inline.svg';
+
+<img src={logo} alt="logo" />
+<LogoInline />
+```
