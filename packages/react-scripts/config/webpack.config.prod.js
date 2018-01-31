@@ -384,6 +384,6 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty',
-    constants: false,
+    constants: process.env.USE_NODE_CONSTANTS === 'true',
   },
 };
