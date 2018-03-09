@@ -1,6 +1,6 @@
 {
   "name": "netguru-react-scripts",
-  "version": "2.0.0-beta.6",
+  "version": "2.0.0",
   "description": "Netguru configuration and scripts for Create React App",
   "repository": "netguru/create-react-app",
   "license": "MIT",
