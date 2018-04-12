@@ -42,11 +42,19 @@ module.exports = (resolve, rootDir, isEjecting) => {
       '^react-native$': 'react-native-web',
       "^.+\\.s?css$": "identity-obj-proxy",
     },
-    "moduleDirectories": [
+    moduleDirectories: [
       "node_modules",
       "<rootDir>/src"
     ],
-    moduleFileExtensions: ['web.js', 'mjs', 'js', 'json', 'web.jsx', 'jsx', 'node'],
+    moduleFileExtensions: [
+      'web.js',
+      'js',
+      'json',
+      'web.jsx',
+      'jsx',
+      'node',
+      'mjs',
+    ],
   };
   if (rootDir) {
     config.rootDir = rootDir;
