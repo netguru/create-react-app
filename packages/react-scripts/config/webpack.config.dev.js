@@ -161,7 +161,6 @@ module.exports = {
             test: /\.(js|jsx|mjs)$/,
             include: paths.appSrc,
             use: [
-              require.resolve('react-hot-loader/webpack'),
               {
                 loader: require.resolve('babel-loader'),
                 options: {
