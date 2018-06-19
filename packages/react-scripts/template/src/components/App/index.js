@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 import logo from './logo.svg';
 import LogoInline from './logo.inline.svg';
 import styles from './style.scss';
@@ -41,4 +42,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export { App as AppUnwrapped };
+export default hot(module)(App);
