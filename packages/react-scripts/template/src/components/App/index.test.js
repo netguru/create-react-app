@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './index';
+import { AppUnwrapped as App } from './index';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
