@@ -329,6 +329,9 @@ module.exports = {
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
     new ExtractTextPlugin({
       filename: cssFilename,
+      // In case of using code splitting, async bundles still use style loader. Set this
+      // flag to true to create main css bundle
+      allChunks: process.env.EXTRACT_CSS_FROM_ALL_CHUNKS === 'true',
     }),
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
