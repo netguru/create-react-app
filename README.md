@@ -17,8 +17,7 @@ The idea behind this project is to provide a solid foundation for **Single Page 
 
 ## Usage
 ```sh
-yarn global add create-react-app
-create-react-app project-name --scripts-version @netguru/react-scripts
+yarn create react-app project-name --scripts-version @netguru/react-scripts
 ```
 
 ## Create React App should not expose any configs, why there is a stylelint and eslint config present?
