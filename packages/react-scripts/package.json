@@ -1,6 +1,6 @@
 {
   "name": "@netguru/react-scripts",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Netguru configuration and scripts for Create React App",
   "repository": "netguru/create-react-app",
   "license": "MIT",
