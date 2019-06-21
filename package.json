@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
@@ -34,5 +34,19 @@
     "yarn.lock": [
       "git rm --cached"
     ]
-  }
+  },
+  "name": "@ccg.ai/react-scripts",
+  "description": "CCG configuration and scripts for create-react-app",
+  "version": "1.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccgenomics/create-react-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccgenomics/create-react-app/issues"
+  },
+  "homepage": "https://github.com/ccgenomics/create-react-app#readme"
 }
