@@ -1,4 +1,4 @@
-# netguru-react-scripts
+# react-scripts
 
 ## Motivation
 
@@ -17,7 +17,7 @@ The idea behind this project is to provide a solid foundation for **Single Page 
 
 ## Usage
 ```sh
-yarn create react-app project-name --scripts-version @netguru/react-scripts
+yarn create react-app project-name --scripts-version @ccg.ai/react-scripts
 ```
 
 ## Create React App should not expose any configs, why there is a stylelint and eslint config present?
@@ -27,7 +27,7 @@ Exposing stylelint and eslint config allows for **out of the box** real time val
 ## How can I update to the latest version?
 
 ```sh
-yarn upgrade @netguru/react-scripts
+yarn upgrade @ccg.ai/react-scripts
 ```
 
 Since linter configs are exposed they may need to be updated manually. Check the release notes for instructions regarding that.
