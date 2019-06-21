@@ -37,7 +37,7 @@
   },
   "name": "@ccg.ai/react-scripts",
   "description": "CCG configuration and scripts for create-react-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "repository": {
     "type": "git",
