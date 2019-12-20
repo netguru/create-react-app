@@ -1,5 +1,12 @@
 # netguru-react-scripts
 
+## !! DEPRECATED !!
+
+*Consider using base [Create React App](https://github.com/facebook/create-react-app) instead*
+
+## !! DEPRECATED !!
+----
+
 ## Motivation
 
 The idea behind this project is to provide a solid foundation for **Single Page Apps**, in the same time to reduce* the amount of cases when eject needs to be used.
